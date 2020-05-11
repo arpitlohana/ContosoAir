@@ -16,7 +16,7 @@ steps:
     displayName: 'Publish Test Results'
     condition: succeededOrFailed()
     inputs:
-      testResultsFiles: '**/TEST-*.xml'
+      testResultsFiles: '**/test-*.xml'
   - task: PublishCodeCoverageResults@1
     displayName: 'Publish Code Coverage'
     condition: 'in(variables[''Agent.JobStatus''], ''Succeeded'')'
